@@ -2,6 +2,7 @@
   "appId": "com.studentos.app.edu",
   "appName": "Student OS",
   "webDir": "dist",
+  "backgroundColor": "#0B0718",
   "server": {
     "androidScheme": "https",
     "cleartext": false
@@ -9,8 +10,12 @@
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 2000,
-      "backgroundColor": "#0f0f1a",
-      "showSpinner": false
+      "launchAutoHide": true,
+      "backgroundColor": "#0B0718",
+      "androidSplashResourceName": "splash",
+      "showSpinner": false,
+      "splashFullScreen": true,
+      "splashImmersive": true
     },
     "GoogleAuth": {
       "scopes": ["profile", "email"],
