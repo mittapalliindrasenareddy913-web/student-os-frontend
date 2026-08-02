@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Student OS</string>
+    <string name="title_activity_main">Student OS</string>
+    <string name="package_name">com.studentos.app.edu</string>
+    <string name="custom_url_scheme">com.studentos.app.edu</string>
+    <string name="server_client_id">1032228296518-72v9ta3tvdropgr45h3ptgkktos1o4r4.apps.googleusercontent.com</string>
+</resources>

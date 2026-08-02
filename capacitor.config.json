@@ -1,0 +1,21 @@
+{
+  "appId": "com.studentos.app.edu",
+  "appName": "Student OS",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#0f0f1a",
+      "showSpinner": false
+    },
+    "GoogleAuth": {
+      "scopes": ["profile", "email"],
+      "clientId": "1032228296518-72v9ta3tvdropgr45h3ptgkktos1o4r4.apps.googleusercontent.com",
+      "forceCodeForRefreshToken": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_number": "89732991091",
+    "project_id": "student-os-e5f6f",
+    "storage_bucket": "student-os-e5f6f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89732991091:android:b8b9c40091ed7811cf8206",
+        "android_client_info": {
+          "package_name": "app.studentos.productivity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOFg9XKPRUKDknfcoeXEqfzXQzr71rTDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89732991091:android:7a09fd54a5bb57f6cf8206",
+        "android_client_info": {
+          "package_name": "com.studentos.app.edu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032228296518-51mc80f6g6dsbd1drhmrkt98218a8t36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.studentos.app.edu",
+            "certificate_hash": "06751bc6f6bb89af01a28a51c28596a1b9b9ca7d"
+          }
+        },
+        {
+          "client_id": "1032228296518-72v9ta3tvdropgr45h3ptgkktos1o4r4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOFg9XKPRUKDknfcoeXEqfzXQzr71rTDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
