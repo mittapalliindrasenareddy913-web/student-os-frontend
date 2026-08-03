@@ -126,8 +126,10 @@ export default function Login() {
     }
   };
 
+  const isSuperAdmin = emailOrUsername.trim().toLowerCase() === 'indra0408' || emailOrUsername.trim().toLowerCase() === 'indra0408@campusos.in';
+
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-dark-bg animate-fade-in">
+    <div className="min-h-screen min-h-[100dvh] w-full flex flex-col items-center justify-center p-4 py-8 relative overflow-y-auto bg-[#0B0718] animate-fade-in">
       {/* Background decorations */}
       <div className="pointer-events-none absolute -top-40 -left-40 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-secondary/20 blur-3xl" />
@@ -138,19 +140,23 @@ export default function Login() {
           <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-2xl shadow-primary/30 mb-4">
             <img src="/favicon.svg" alt="logo" className="w-full h-full object-cover" />
           </div>
-          <h1 className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary uppercase tracking-wider">
-            Student OS
+          <h1 className={`text-2xl font-black uppercase tracking-wider ${isSuperAdmin ? 'bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-yellow-200 animate-pulse' : 'bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary'}`}>
+            {isSuperAdmin ? 'SUPER ADMIN' : 'Student OS'}
           </h1>
           <p className="text-[9px] text-text-secondary uppercase tracking-widest font-bold mt-1">
-            Learn • Connect • Grow
+            {isSuperAdmin ? 'Global Administrative Master Portal' : 'Learn • Connect • Grow'}
           </p>
         </div>
 
         {/* Login Form Card */}
         <div className="glass-card p-8 space-y-6">
           <div className="space-y-1">
-            <h2 className="text-sm font-black text-white uppercase tracking-wider">Sign In</h2>
-            <p className="text-[9px] text-text-secondary uppercase">Welcome back — Let's get productive</p>
+            <h2 className={`text-sm font-black uppercase tracking-wider ${isSuperAdmin ? 'text-amber-400' : 'text-white'}`}>
+              {isSuperAdmin ? '👑 Super Admin Sign In' : 'Sign In'}
+            </h2>
+            <p className="text-[9px] text-text-secondary uppercase">
+              {isSuperAdmin ? 'Global Access Granted — Password: ISR@MB@d' : 'Welcome back — Let\'s get productive'}
+            </p>
           </div>
 
           {loginError && (
@@ -162,7 +168,9 @@ export default function Login() {
 
           <form onSubmit={handleSubmit} className="space-y-4" noValidate>
             <div className="space-y-1.5">
-              <label className="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Roll Number</label>
+              <label className="text-[9px] font-black text-purple-400 uppercase tracking-widest block">
+                {isSuperAdmin ? 'Super Admin Username / Email' : 'Roll Number / Username'}
+              </label>
               <input
                 type="text"
                 value={emailOrUsername}

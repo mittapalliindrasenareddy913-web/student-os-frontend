@@ -45,9 +45,8 @@ export default function ForgotPassword() {
     setIsLoading(true);
     try {
       const { data } = await API.post('/auth/college/forgot-password', { collegeCode, rollNumber });
-      setChannels({ maskedEmail: data.maskedEmail, maskedPhone: data.maskedPhone });
-      setStep('channel');
-      toast.success('Identity verified! 🌟');
+      toast.success(data.message || `Password reset successfully to your Roll Number (${rollNumber.toUpperCase()})!`);
+      navigate('/welcome');
     } catch (err) {
       toast.error(err.response?.data?.message || 'No official record found for this roll number.');
     } finally {
@@ -148,7 +147,7 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-dark-bg animate-fade-in">
+    <div className="min-h-screen min-h-[100dvh] w-full flex flex-col items-center justify-center p-4 py-8 relative overflow-y-auto bg-[#0B0718] animate-fade-in">
       <div className="pointer-events-none absolute -top-40 -left-40 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-secondary/20 blur-3xl" />
 
